@@ -1,0 +1,106 @@
+*,
+::before,
+::after{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Courier New', Courier, monospace;
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+}
+
+.form-control {
+  margin-top: 50%;
+}
+
+form {
+  width: clamp(300px, 40vw, 1280px);
+  margin: 0 auto;
+  padding: 10px;
+  background: transparent;
+  backdrop-filter: blur(20px);
+  --webkit-backdrop-filter: blur(20px);
+  background-image: linear-gradient(50deg,
+    rgba(108, 188, 26, 0.5),
+    rgba(9, 255, 105, 0.3));
+  background-size: 100px;
+  border-radius: 3px;
+}
+
+form .input-group {
+  position: relative;
+  margin-block: 10px;
+}
+
+form .input-group input {
+  display: block;
+  padding: 10px 0;
+  width: 100%;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #74CF97;
+  background: transparent;
+  padding-left: 15px;
+}
+
+form .input-group label {
+  position: absolute;
+  color: #43C66E;
+  top: 50%;
+  left: 15px;
+  font-size: 20px;
+  transform: translateY(-50%);
+  transition: 0.3s ease-in;
+}
+
+form .input-group input:focus ~ label,
+form .input-group input:valid ~ label
+{
+  top: 0;
+  font-size: 16px;
+  transition: 0.3s ease-out;
+}
+
+button[name="submit"] {
+  width: 100%;
+  color: #fff;
+  font-size: 16px;
+  margin-top: 5px;
+  padding: 12px 18px;
+  border-radius: 3px;
+  border: 1px solid #43C66E;
+  background: transparent;
+  transition: 0.3s;
+}
+
+button[name="submit"]:hover {
+  background: #38423C;
+  transition: 0.3s;
+}
+
+
+@media screen and (min-width: 568px){
+  .main {
+    margin-top: -500px;
+  }
+}
+
+.item {
+  width: clamp(300px, 40vw, 1280px);
+  margin: 0 auto;
+  padding: 10px;
+  box-shadow: 0 0 10px 2px #ccc;
+  margin: 20px 0;
+}
+
+.item span,h3:nth-child(odd) {
+  background: #fff;
+  color: #000;
+}
+.item i {
+  font-size: 3em;
+}
